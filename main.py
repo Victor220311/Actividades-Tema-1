@@ -14,3 +14,17 @@ def decodificar_mensaje(mensaje_cifrado):
     
     return mensaje_limpio.strip()
 
+# Ejercicio 2: Simulador de Ahorro Mensual
+def simulador_ahorro(cantidad_inicial, cantidad_mensual, num_meses):
+    """
+    Simula el ahorro mensual y calcula el total final
+    """
+    total_ahorrado = cantidad_inicial + (cantidad_mensual * num_meses)
+    
+    print(f"Total ahorrado después de {num_meses} meses: {total_ahorrado}€")
+    
+    if total_ahorrado > 5000:
+        print("¡Felicitaciones! Has superado los 5000€ de ahorro.")
+    
+    return total_ahorrado
+
