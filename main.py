@@ -89,4 +89,55 @@ def generar_adn(longitud):
     
     return adn, contador
 
+# Ejercicio 6: Inventario de Personajes
+def inventario_personajes(personajes):
+    """
+    Organiza personajes por tipo y los ordena según criterios específicos
+    """
+    humanos = []
+    criaturas = []
+    
+    for nombre, tipo in personajes.items():
+        if tipo == "humano":
+            humanos.append(nombre)
+        elif tipo == "criatura":
+            criaturas.append(nombre)
+    
+    # Ordenar humanos alfabéticamente
+    humanos_ordenados = sorted(humanos)
+    
+    # Ordenar criaturas por longitud de nombre
+    criaturas_ordenadas = sorted(criaturas, key=len)
+    
+    return humanos_ordenados, criaturas_ordenadas
+
+# Ejercicio 7: Analizador de URL
+def analizar_url(url):
+    """
+    Analiza una URL y extrae sus componentes principales
+    """
+    try:
+        # Extraer protocolo
+        if '://' in url:
+            protocolo, resto = url.split('://', 1)
+        else:
+            return "URL inválida: falta protocolo"
+        
+        # Extraer dominio y recurso
+        if '/' in resto:
+            dominio, recurso = resto.split('/', 1)
+        else:
+            dominio = resto
+            recurso = None
+        
+        resultado = {
+            'protocolo': protocolo,
+            'dominio': dominio,
+            'recurso': recurso if recurso else 'Sin recurso específico'
+        }
+        
+        return resultado
+    
+    except Exception as e:
+        return f"Error al analizar URL: {str(e)}"
 
