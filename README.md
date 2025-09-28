@@ -3,6 +3,7 @@
 ## 📋 Descripción
 Esta colección contiene 7 ejercicios diseñados para repasar los conceptos fundamentales de Python, incluyendo manipulación de strings, estructuras de datos, funciones y algoritmos básicos.
 
+## Link para el profesor: https://github.com/Victor220311/Actividades-Tema-1.git
 ---
 
 ## 🚀 Ejercicios
